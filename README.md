@@ -15,4 +15,10 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+## Усановлено в сборник 
+
+``` bash
+# install start
+npm install --save axios vue-axios vue-resource vue-router vuelidate vuex
+```
 
