@@ -27,6 +27,7 @@ export default {
         changePostTitle (state, payload){
             state.postTitle = payload
             console.log(payload)
+            console.log('https://jsfiddle.net/posva/oqe9e8pb/')
         }
     },
     actions: {
