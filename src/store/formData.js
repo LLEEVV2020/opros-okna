@@ -50,7 +50,14 @@ export default {
             .catch(function (error) {
               console.log(error);
             });
+        }, 
+        asyncChangePostBody(context, payload){
+            context.commit('changePostBody', payload )
+       },
+       asyncChangePostTitle(context, payload){
+            context.commit('changePostTitle', payload )
         }
-    }
+    },
+    
 
 }

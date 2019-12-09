@@ -2,8 +2,8 @@
     <div>
         <h1>Отправить почту {{titleTest}} </h1>
 
-        <input type="text" @change="updatePostBody" placeholder="title"/>
-        <input type="text" @change="updatePostTitle" placeholder="body"/>
+        <input type="text" v-model="updatePostBody" placeholder="title" class="fffffffffddd"/>
+        <input type="text" v-model="updatePostTitle" placeholder="body" class="fffffffffddd"/>
         <input type="button" @click="enterMailing()" value="submit">
     </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 
 export default {
-  // props: ['counter']
+  // https://vuex.vuejs.org/ru/guide/forms.html
     computed: {
         titleTest(){
             return this.$store.getters.titleTest
@@ -22,15 +22,15 @@ export default {
         postTitle(){
             return this.$store.getters.postTitle
         },
-
-    },
-    methods: {
         updatePostBody(val){
-            this.$store.commit('changePostBody', val);
+            this.$store.dispatch('asyncChangePostBody', val);
         },
         updatePostTitle(val){
-            this.$store.commit('changePostTitle', val);
+            this.$store.dispatch('asyncChangePostTitle', val);
         },
+    },
+    methods: {
+        
         enterMailing(val){
             
             this.$store.dispatch('createPost', {
