@@ -16,24 +16,30 @@ export default {
         titleTest(){
             return this.$store.getters.titleTest
         },
-        postBody(){
-            return this.$store.getters.postBody
+        
+        updatePostTitle: {
+            get: function () {
+                return this.$store.getters.postTitle
+            },
+            set: function (val) {
+                this.$store.commit('changePostTitle', val)
+            }
         },
-        postTitle(){
-            return this.$store.getters.postTitle
-        },
-        updatePostBody(val){
-            this.$store.dispatch('asyncChangePostBody', val);
-        },
-        updatePostTitle(val){
-            this.$store.dispatch('asyncChangePostTitle', val);
-        },
+        updatePostBody: {
+            get: function () {
+                return this.$store.getters.postBody
+            },
+            set: function (val) {
+                this.$store.commit('changePostBody', val)
+            }
+        }
     },
     methods: {
         
         enterMailing(val){
             
-            this.$store.dispatch('createPost', {
+            this.$store.dispatch('createPost', { 
+                val
                 //counterValue: val,
                 //timeoutDelay: 200
             })

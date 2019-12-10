@@ -4,8 +4,7 @@ export default {
     state: {
         titleTest: 'Ну должно же сработать',
         postBody: null,
-        postTitle: null,
-        vocil: ['222222']
+        postTitle: null
     },
     getters: {
         titleTest(state){
@@ -22,40 +21,35 @@ export default {
         changePostBody (state, payload){
             state.postBody = payload
             console.log(payload)
+            console.log(state.postBody)
         },
         
         changePostTitle (state, payload){
             state.postTitle = payload
             console.log(payload)
-            console.log('https://jsfiddle.net/posva/oqe9e8pb/')
+            console.log(state.postTitle)
         }
     },
     actions: {
-        createPost () {
+        createPost (val) {
             axios({
               method: 'post',
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               url: 'https://copy.css-world.ru/form.php',
               data: {
-                  firstName: this.postTitle,
-                  lastName: this.postBody,
-                  ggggggg: "ggggdd",
-                  vocil: this.vocil
+                  Vse_dannie: val,
+                  firstName: val.state.postTitle,
+                  lastName: val.state.postBody
               }
             })
             .then(response => {
                 this.otvet = response.data
                 console.log(response)
+                console.log(val)
             })
             .catch(function (error) {
               console.log(error);
             });
-        }, 
-        asyncChangePostBody(context, payload){
-            context.commit('changePostBody', payload )
-       },
-       asyncChangePostTitle(context, payload){
-            context.commit('changePostTitle', payload )
         }
     },
     
