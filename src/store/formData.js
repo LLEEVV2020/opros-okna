@@ -2,14 +2,10 @@ import axios from 'axios'
 
 export default {
     state: {
-        titleTest: 'Ну должно же сработать',
         postBody: null,
         postTitle: null
     },
     getters: {
-        titleTest(state){
-            return state.titleTest
-        },
         postBody(state){
             return state.postBody
         },
@@ -19,15 +15,11 @@ export default {
     },
     mutations: {
         changePostBody (state, payload){
-            state.postBody = payload
-            console.log(payload)
-            console.log(state.postBody)
+            state.postBody = payload           
         },
         
         changePostTitle (state, payload){
             state.postTitle = payload
-            console.log(payload)
-            console.log(state.postTitle)
         }
     },
     actions: {
@@ -38,14 +30,16 @@ export default {
               url: 'https://copy.css-world.ru/form.php',
               data: {
                   Vse_dannie: val,
-                  firstName: val.state.postTitle,
-                  lastName: val.state.postBody
+                  firstName: val.state.postBody,
+                  lastName: val.state.postTitle
               }
             })
             .then(response => {
                 this.otvet = response.data
+                console.log(this.otvet)
                 console.log(response)
-                console.log(val)
+                val.state.postBody = null
+                val.state.postTitle = null
             })
             .catch(function (error) {
               console.log(error);

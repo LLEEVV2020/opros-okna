@@ -4,7 +4,6 @@
       <hr>                            
 
         <app-counter></app-counter>
-        <app-second-counter></app-second-counter>
         <hr>
         <app-actions ></app-actions>
         <hr>
@@ -16,7 +15,6 @@
 
 import Counter from './Counter'
 import Actions from './Actions'
-import SecondCounter from './SecondCounter'
 import FormSending from './FormSending'
 
 export default {
@@ -24,7 +22,6 @@ export default {
     components: {
       appCounter: Counter,
       appActions: Actions,
-      appSecondCounter: SecondCounter,
       appFormSending: FormSending
     },
   computed: {
@@ -38,6 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  
+  @import "assets/css/style";
 
 </style>

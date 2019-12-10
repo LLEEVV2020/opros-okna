@@ -17,7 +17,7 @@ export default new Vuex.Store({
     },
     getters: {
         title(state){
-            return state.title + '!!78678yyh'
+            return state.title
         }
     }
 
