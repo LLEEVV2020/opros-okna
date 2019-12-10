@@ -2,10 +2,14 @@ import axios from 'axios'
 
 export default {
     state: {
+        answer: false,
         postBody: null,
         postTitle: null
     },
     getters: {
+        answer(state){
+            return state.answer
+        },
         postBody(state){
             return state.postBody
         },
@@ -14,6 +18,9 @@ export default {
         }
     },
     mutations: {
+        changeAnswer (state, payload){
+            state.answer = payload           
+        },
         changePostBody (state, payload){
             state.postBody = payload           
         },
@@ -35,9 +42,9 @@ export default {
               }
             })
             .then(response => {
-                this.otvet = response.data
-                console.log(this.otvet)
+                val.state.answer = response.data
                 console.log(response)
+                console.log(val.state.answer)
                 val.state.postBody = null
                 val.state.postTitle = null
             })
