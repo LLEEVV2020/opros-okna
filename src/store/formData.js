@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { genVuexModels } from 'vuex-models'
 
 export default {
     state: {
@@ -45,8 +46,11 @@ export default {
                 val.state.answer = response.data
                 console.log(response)
                 console.log(val.state.answer)
+                console.log(val.getters.Vxm_vmodelCompatible)
+                console.log(val.getters.Vxm_vmodelCompatible2)
                 val.state.postBody = null
                 val.state.postTitle = null
+                
             })
             .catch(function (error) {
               console.log(error);
