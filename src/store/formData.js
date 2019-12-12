@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { genVuexModels } from 'vuex-models'
 
 export default {
     state: {
@@ -19,7 +18,7 @@ export default {
         }
     },
     mutations: {
-        changeAnswer (state, payload){
+        answer (state, payload){
             state.answer = payload           
         },
         changePostBody (state, payload){
@@ -31,6 +30,12 @@ export default {
         }
     },
     actions: {
+        
+        answer ({commit}, payload){
+            
+            commit('answer', payload.counterValue)
+            
+        },
         createPost (val) {
             axios({
               method: 'post',
@@ -43,14 +48,15 @@ export default {
               }
             })
             .then(response => {
-                val.state.answer = response.data
+                /** Открывается модальное окно */
+                val.state.answer = true /*response.data*/
+
                 console.log(response)
-                console.log(val.state.answer)
-                console.log(val.getters.Vxm_vmodelCompatible)
-                console.log(val.getters.Vxm_vmodelCompatible2)
+                console.log("val.state.answer: " + val.state.answer)
+                //console.log(val.getters.Vxm_vmodelCompatible)
+                //console.log(val.getters.Vxm_vmodelCompatible2)
                 val.state.postBody = null
                 val.state.postTitle = null
-                
             })
             .catch(function (error) {
               console.log(error);

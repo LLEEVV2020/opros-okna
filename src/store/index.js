@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import { genVuexModels } from 'vuex-models'
 import counter from './counter'
 import formData from './formData'
+import title from './title'
 
 
 Vue.use(Vuex);
@@ -11,17 +12,11 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     modules: {
         counter,
-        formData
+        formData,
+        title
     },
-    state: {
-        title: 'hello from store'
-        
-    },
-    getters: {
-        title(state){
-            return state.title
-        }
-    },
+    
+    
     ...genVuexModels({
       vmodelCompatible: true,
       vmodelCompatible2: false

@@ -1,0 +1,8 @@
+=========Vuex-models============
+https://ikfi.ru/project/vuex-models
+https://ikfi.ru/article/vuex-models-prostoj-sposob-nauchit-vuex-rabotat-s-v-model
+https://github.com/ikenfin/vuex-models
+
+
+
+

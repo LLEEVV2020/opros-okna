@@ -9,19 +9,23 @@
         <!--резерв-->
         <input type="checkbox" value="huyhhhg" v-model="vmodelCompatible" />
         <input type="checkbox" value="rttttrr" v-model="vmodelCompatible2" />
+
+        
+
+
     </div>
 </template>
 
 <script>
 import { mapVuexModels } from 'vuex-models'
 
+
 export default {
-  
+
     computed: {
         title(){
             return this.$store.getters.title
         },
-        
         updatePostTitle: {
             get: function () {
                 return this.$store.getters.postTitle
