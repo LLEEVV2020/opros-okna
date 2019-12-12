@@ -61,5 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  /* https://vuex.vuejs.org/ru/guide/forms.html*/
+  /*
+http://hammerjs.github.io/
+ https://vuex.vuejs.org/ru/guide/forms.html*/
 </style>
