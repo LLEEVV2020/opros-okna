@@ -62,7 +62,4 @@ export default {
 
 <style lang="scss" scoped>
   /* https://vuex.vuejs.org/ru/guide/forms.html*/
-  i{
-      color: #676767; 
-  }
 </style>
