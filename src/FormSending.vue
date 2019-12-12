@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  /*
+  /*https://github.com/vuejs/vue-touch/tree/next
 http://hammerjs.github.io/
  https://vuex.vuejs.org/ru/guide/forms.html*/
 </style>
