@@ -5,15 +5,17 @@
       <input type="text" v-model="titlMain" placeholder="titlMain" />
       <hr>                            
 
-        <app-counter></app-counter>
-        <hr>
-        <app-actions ></app-actions>
-        <hr>
-
-        <app-form-sending></app-form-sending>
-        <hr>
-        <app-Form-Modal v-if="answer"> </app-Form-Modal>
         
+
+      <app-form-sending></app-form-sending>
+      <hr>
+      <app-Form-Modal v-if="answer"> </app-Form-Modal>
+      <hr>
+      <app-counter></app-counter>
+      <hr>
+      <app-actions ></app-actions>
+      
+
     </div>
 </template>
 

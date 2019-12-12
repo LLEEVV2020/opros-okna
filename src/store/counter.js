@@ -5,7 +5,7 @@ export default {
     /** get */
     getters: {
         computedCouner (state){
-            return state.counter *(5 - 2)
+            return state.counter
         }
     },
     /** set */
