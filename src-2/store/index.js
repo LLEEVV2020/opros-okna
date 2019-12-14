@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { genVuexModels } from 'vuex-models'
-//import formData from './formData'
-import store from './store'
-import storeLight from './storeLight'
+import formData from './formData'
 
 
 Vue.use(Vuex);
@@ -11,16 +9,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     modules: {
-        //formData,
-        store,
-        storeLight
+        formData
     },
     
     
-    /*...genVuexModels({
+    ...genVuexModels({
       vmodelCompatible: true,
       vmodelCompatible2: false
 
-    }, 'featureStateVariable')*/
+    }, 'featureStateVariable')
 
 })

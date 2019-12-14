@@ -9,13 +9,13 @@
 
                     <div class="modal-header">
                         <slot name="header">
-                        <h1>Модальное окно </h1>
+                        <h1>Модальное окно {{title}} </h1>
                         </slot>
                     </div>
 
                     <div class="modal-body">
                         <slot name="body">
-                        <h2>-- подзаголовок --</h2>
+                        <h2>-- {{titlMain}} --</h2>
                         </slot>
                     </div>
 
@@ -50,7 +50,18 @@ export default {
     computed: {
         
 
+        title(){
+            return this.$store.getters.title
+        },
         
+        titlMain: {
+            get: function () {
+                return this.$store.getters.titlMain
+            },
+            set: function (val) {
+                this.$store.commit('titlMain', val)
+            }
+        },
         answer: {
             get: function () {
                 return this.$store.getters.answer

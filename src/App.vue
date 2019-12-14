@@ -1,52 +1,43 @@
 <template>
     <div class="container text-center pt-5">
-      <h1>{{title}}</h1>
-      <h2>-- {{titlMain}} --</h2>
-      <input type="text" v-model="titlMain" placeholder="titlMain" />
-      <hr>                            
-
-        
-
-      <app-form-sending></app-form-sending>
-      <hr>
-      <app-Form-Modal v-if="answer"> </app-Form-Modal>
-      <hr>
-      <app-counter></app-counter>
-      <hr>
-      <app-actions ></app-actions>
       
+                                
+      <store></store>
+      <storeLight></storeLight>
+      <span v-if="Seen">Сейчас меня видно</span>
 
     </div>
 </template>
 
 <script>
 
-import Counter from './Counter'
-import Actions from './Actions'
-import FormSending from './FormSending'
-import FormModal from './FormModal'
+//import FormSending from './FormSending'
+//import FormModal from './FormModal'
+//import { mapVuexModels } from 'vuex-models'
+import store from './Store'
+import storeLight from './StoreLight'
 export default {
     
     components: {
-      appCounter: Counter,
-      appActions: Actions,
-      appFormSending: FormSending,
-      appFormModal: FormModal
+      //appFormSending: FormSending,
+      //appFormModal: FormModal
+      store,
+      storeLight
 
     },
+  data: function() {
+    return  {
+      seen: true
+    }
+  },
   computed: {
-    title(){
-      return this.$store.getters.title
-    },
-    answer(){
-        return this.$store.getters.answer
-    },
-    titlMain: {
+    Seen: {
       get: function () {
-          return this.$store.getters.titlMain
+        return this.seen
       },
-      set: function (val) {
-          this.$store.commit('titlMain', val)
+      
+      set: function (newValue) {
+        this.seen = newValue
       }
     }
   }

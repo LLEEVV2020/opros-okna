@@ -1,7 +1,8 @@
 <template>
     <div>
         
-        <h1>Отправить почту </h1>
+        <app-form-modal-wrapper></app-form-modal-wrapper>
+        <h1>Отправить почту {{title}} </h1>
 
         <!--<input type="text" v-model="updatePostBody" placeholder="имя" class="fffffffffddd"/>-->
         <input type="text" v-model="updatePhone" placeholder="Телефон" />
@@ -20,11 +21,17 @@
 <script>
 import { mapVuexModels } from 'vuex-models'
 
+import FormModalWrapper from './FormModalWrapper'
 
 export default {
-    
+    components: {
+      appFormModalWrapper: FormModalWrapper
+
+    },
     computed: {
-        
+        title(){
+            return this.$store.getters.title
+        },
         updatePhone: {
             get: function () {
                 return this.$store.getters.postTitle
