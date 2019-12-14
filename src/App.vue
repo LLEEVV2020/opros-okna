@@ -2,43 +2,35 @@
     <div class="container text-center pt-5">
       
                                 
-      <store></store>
-      <storeLight></storeLight>
-      <span v-if="Seen">Сейчас меня видно</span>
+
+        
+      <app-form-sending></app-form-sending>
+      <hr>
+      <app-Form-Modal v-if="answer"> </app-Form-Modal>
+      <app-Test></app-Test>
+      
 
     </div>
 </template>
 
 <script>
 
-//import FormSending from './FormSending'
-//import FormModal from './FormModal'
-//import { mapVuexModels } from 'vuex-models'
-import store from './Store'
-import storeLight from './StoreLight'
+import FormSending from './FormSending'
+import FormModal from './FormModal'
+import Test from './test'
+
 export default {
     
     components: {
-      //appFormSending: FormSending,
-      //appFormModal: FormModal
-      store,
-      storeLight
+      appFormSending: FormSending,
+      appFormModal: FormModal,
+      appTest: Test
 
     },
-  data: function() {
-    return  {
-      seen: true
-    }
-  },
   computed: {
-    Seen: {
-      get: function () {
-        return this.seen
-      },
-      
-      set: function (newValue) {
-        this.seen = newValue
-      }
+    
+    answer(){
+        return this.$store.getters.answer
     }
   }
 

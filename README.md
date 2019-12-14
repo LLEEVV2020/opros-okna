@@ -20,6 +20,9 @@ npm run build
 ``` bash
 # install start
 npm install --save axios vue-axios vue-resource vue-router vuelidate vuex vue vuex-models
+
+# new
+npm install vue vue-template-compiler --save
 ```
 ## Письмо на почту
 
