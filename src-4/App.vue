@@ -5,8 +5,9 @@
 
         
       <app-form-sending></app-form-sending>
-      
-      
+      <hr>
+      <app-Form-Modal v-if="answer"> </app-Form-Modal>
+      <app-Test></app-Test>
       
 
     </div>
@@ -14,14 +15,16 @@
 
 <script>
 
-import FormSending from './components/FormModal'
-
+import FormSending from './FormSending'
+import FormModal from './FormModal'
+import Test from './test'
 
 export default {
     
     components: {
       appFormSending: FormSending,
-      
+      appFormModal: FormModal,
+      appTest: Test
 
     },
   computed: {
