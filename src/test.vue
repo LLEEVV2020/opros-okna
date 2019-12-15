@@ -11,16 +11,28 @@
             v-for="(item, index) in poll[perelitiv].list" 
             :key="item.id"
           >
+          <div v-if="item.text">
             {{ index + 1 }}. {{ item.img }} <br>
             {{ item.text }}
             <p><input type="checkbox"  v-model="item.checkbox"  /></p>
+          </div>
+           
+          <div v-else>
+             <input type="text"  placeholder="Телефон" />
+        <input type="button"  value="submit">
 
+          </div>
           </li>
           
         </ul>
-          
+<div v-if="tableVisibilitylength !== perelitiv">
+
+
             <button class="btn btn-success"  @click="counterPlus(tableVisibilitylength)" >Add</button>
             <button class="btn btn-danger" v-if="perelitiv" @click="counterMinus()" >Minus</button>
+
+</div>
+
         <p>Левая картинка - {{ poll[perelitiv].leftimg }}</p>
         <p>{{perelitiv}}</p>
         

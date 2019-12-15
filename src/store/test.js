@@ -155,7 +155,7 @@ export default {
         leftimg: '156.jpg',
         list: [
           {
-            img: null,
+            
             text: 'Да',
             checkbox: false
           },
@@ -171,55 +171,29 @@ export default {
         leftimg: '155.jpg',
         list: [
           {
-            img: null,
+            
             text: 'Да',
             checkbox: false
           },
           {
-            img: null,
             text: 'Нет',
             checkbox: false
           }
         ]
+      },
+      {/** 8 */
+        name: 'Оставьте свой номер телефона и мы свяжемся с вами в ближайшие 10 минут!', 
+        leftimg: '155.jpg',
+        list: [
+          {
+            
+          }
+        ]
       }
     ],
-    tableVisibilitylength : 7 - 1,
+    tableVisibilitylength : 8 - 1
     
-    tableTitles:{
-      'Dog': [
-          'German Shepherd', 
-          'Bull Terrier', 
-          'Labrador Retriever',
-          'jjjjjjjjjjjjjjjj'
-      ],
-      'Cat': [
-        'Russian Blue', 
-        'British Shorthair', 
-        'Persian'
-      ],
-      'Bird': [
-        'Cockatiel',
-        'Parrot', 
-        'Macaw']
-      },
-      tableVisibility: {
-          'Dog': {
-              'German Shepherd': false,
-              'Bull Terrier': false,
-              'Labrador Retriever': false,
-              'jjjjjjjjjjjjjjjj': false
-          },
-          'Cat': {
-              'Russian Blue': false,
-              'British Shorthair': false,
-              'Persian': false
-          },
-          'Bird': {
-              'Cockatiel': false,
-              'Parrot': false,
-              'Macaw': false
-          }
-      }
+    
 
   })
 
