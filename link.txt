@@ -10,6 +10,7 @@ https://bootstrap-4.ru/docs/4.0/components/popovers/
 
 =========bootstrap-vue============
 https://bootstrap-vue.js.org/docs
+https://bootstrap-vue.js.org/docs/components/form
 
 =========vuex============
 https://vuex.vuejs.org/

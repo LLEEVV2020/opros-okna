@@ -1,14 +1,21 @@
 <template>
     <div class="container text-center pt-5">
-      <img src="./assets/logo.png">
+      
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>               
+<b-form-group
+      id="fieldset-1"
+      description="Let us know your name."
+      label="Enter your name"
+      label-for="input-1"
+      :invalid-feedback="invalidFeedback"
+      :valid-feedback="validFeedback"
+      :state="state"
+    >
+      <b-form-input id="input-1" v-model="name" :state="state" trim></b-form-input>
+    </b-form-group>
+
+
+              
 <popper
     trigger="clickToToggle"
     :options="{
@@ -49,21 +56,43 @@ import 'vue-popperjs/dist/vue-popper.css';
 
 export default {
     
-    components: {
-      appFormSending: FormSending,
-      appFormModal: FormModal,
-      appTest: Test,
-      appTest2: Test2,
-      popper: Popper
+ 
+  components: {
+    appFormSending: FormSending,
+    appFormModal: FormModal,
+    appTest: Test,
+    appTest2: Test2,
+    popper: Popper
 
-    },
+  },
   computed: {
     
     answer(){
         return this.$store.getters.answer
-    }
+    },
+    state() {
+        return this.name.length >= 4 ? true : false
+      },
+      invalidFeedback() {
+        if (this.name.length > 4) {
+          return ''
+        } else if (this.name.length > 0) {
+          return 'Enter at least 4 characters'
+        } else {
+          return 'Please enter something'
+        }
+      },
+      validFeedback() {
+        return this.state === true ? 'Thank you' : ''
+      }
   }
 
+    ,
+    data() {
+      return {
+        name: ''
+      }
+    }
 
 }
 </script>
