@@ -1,0 +1,22 @@
+CSS-анимации
+https://codepen.io/ruslan_khomiak/pen/ObooMV?editors=1100
+https://stfalcon.com/ru/blog/post/animation-css
+
+Модальные окна
+https://codepen.io/alligatorio/pen/MrdLRy
+
+vue-router 
+https://webdevblog.ru/ispolzovanie-middleware-vo-vue/
+
+vuejs Основы компонентов
+https://ru.vuejs.org/v2/guide/components.html
+https://ru.vuejs.org/v2/guide/components-props.html
+
+
+
+
+
+
+
+
+

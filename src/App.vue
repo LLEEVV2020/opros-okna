@@ -9,6 +9,23 @@
     <li class="breadcrumb-item active" aria-current="page">Data</li>
   </ol>
 </nav>               
+<popper
+    trigger="clickToToggle"
+    :options="{
+      placement: 'top',
+      modifiers: { 
+        offset: { offset: '0,10px' } 
+      },
+      removeOnDestroy: false
+    }">
+    <div class="popper">
+      Popper Content
+    </div>
+
+    <button slot="reference">
+      Reference Element
+    </button>
+  </popper>            
 
         
       <app-form-sending></app-form-sending>
@@ -27,13 +44,17 @@ import FormModal from './FormModal'
 import Test from './test'
 import Test2 from './Test2'
 
+import Popper from 'vue-popperjs';
+import 'vue-popperjs/dist/vue-popper.css';
+
 export default {
     
     components: {
       appFormSending: FormSending,
       appFormModal: FormModal,
       appTest: Test,
-      appTest2: Test2
+      appTest2: Test2,
+      popper: Popper
 
     },
   computed: {

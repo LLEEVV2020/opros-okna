@@ -3,6 +3,13 @@ https://ikfi.ru/project/vuex-models
 https://ikfi.ru/article/vuex-models-prostoj-sposob-nauchit-vuex-rabotat-s-v-model
 https://github.com/ikenfin/vuex-models
 
+=========vue-popperjs============
+https://popper.js.org/popper-documentation.html
+https://github.com/RobinCK/vue-popper
+https://bootstrap-4.ru/docs/4.0/components/popovers/
 
+=========bootstrap-vue============
+https://bootstrap-vue.js.org/docs
 
-
+=========vuex============
+https://vuex.vuejs.org/
