@@ -23,7 +23,8 @@ npm install --save axios vue-axios vue-resource vue-router vuelidate vuex vue vu
 
 # new
 npm install vue vue-template-compiler --save
-npm install vue-popperjs --save
+npm install vue-popperjs bootstrap-vue bootstrap --save
+
 ```
 ## Письмо на почту
 
