@@ -1,6 +1,6 @@
 <template>
   <div class="smartquizLayout">
-    <div  class="smartquiz__window">
+    <div  class="smartquiz">
               
       <app-form-sending></app-form-sending>
       <hr>
