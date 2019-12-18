@@ -43,7 +43,7 @@
 </template>
 
 <script>
-
+// https://lk.conversus.pro/api/v1.0/user-quiz/widget/329/show?target_src=gostokno174.ru
 import FormSending from './FormSending'
 import FormModal from './FormModal'
 import Test from './test'
