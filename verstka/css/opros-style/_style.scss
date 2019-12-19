@@ -4,8 +4,53 @@ body{
 *, ::before, ::after{
     box-sizing: border-box;
 }
+.smartquiz{
+    font-family: 'Roboto', Arial;
+    .growing-sale{
+        border: 2px solid #bbdea0;
+        background: #ecf9e2;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 13px;
+
+        i{
+            color: #63d60e;
+            font-size: 14px;
+            font-style: normal;
+            
+        }
+    }
+    .motivator-title{
+        max-width: 93px;
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    .motivator-summ{
+        flex: 1;
+        font-weight: bold;
+    }
+    .svg-growing {
+        width: 17px;
+        height: 17px;
+        margin-top: 6px;
+        margin-bottom: 3px;
+        animation: SmartQuizAnimfadeInUp .7s infinite linear;
+    }
+}
 
 
+@keyframes SmartQuizAnimfadeInUp {
+    from {
+        -webkit-transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, 30%, 0);
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
 /*.smartquizLayout{
     font-family: 'Roboto', Arial;
     position: fixed;
