@@ -16,6 +16,7 @@ body{
 
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 .smartquizlayout{
@@ -70,8 +71,6 @@ body{
         height: 24px;
         cursor: pointer;
         background-size: contain;
-        top: 24px;
-        right: 30px;
         transition: all .2s linear;
 		margin-left: auto;
 		margin-right: 10px;
@@ -255,6 +254,8 @@ body{
         box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.12);
         padding: 0 170px 0 50px;
         z-index: 2;
+        display: flex;
+        align-items: center;
     }
     .btn-prev{
         border: 0px;
@@ -273,10 +274,7 @@ body{
         position: relative;
         outline: none;
         background-color: transparent;
-        display: none;
-
-
-
+        
     }
     .arrow-prev {
         margin: 0 5px 0 5px;

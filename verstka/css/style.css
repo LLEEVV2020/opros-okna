@@ -109,6 +109,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -178,8 +180,6 @@ body {
   height: 24px;
   cursor: pointer;
   background-size: contain;
-  top: 24px;
-  right: 30px;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   margin-left: auto;
@@ -392,13 +392,13 @@ body {
 }
 
 .smartquizlayout .window-bottom a {
-  color: #e83914 !important;
-  border-bottom: 1px solid rgba(232, 57, 20, 0.3) !important;
+  color: #e83914;
+  border-bottom: 1px solid rgba(232, 57, 20, 0.3);
 }
 
 .smartquizlayout .window-bottom a:hover {
-  color: #e83914 !important;
-  border-bottom: 1px solid transparent !important;
+  color: #e83914;
+  border-bottom: 1px solid transparent;
 }
 
 .smartquizlayout .controls-mobile {
@@ -411,6 +411,12 @@ body {
           box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.12);
   padding: 0 170px 0 50px;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .smartquizlayout .btn-prev {
@@ -429,7 +435,16 @@ body {
   position: relative;
   outline: none;
   background-color: transparent;
-  display: none;
+}
+
+.smartquizlayout .arrow-prev {
+  margin: 0 5px 0 5px;
+  width: 18px;
+  height: 17px;
+  background-image: url(../img/quiz/step-arrow.svg);
+  background-size: cover;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .smartquizlayout .steps-paginator {
