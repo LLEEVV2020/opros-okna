@@ -1,3 +1,5 @@
 Как правильно привязать v-model к компоненту кастомного checkbox?
 https://qna.habr.com/q/577978
 
+Шрифты с сайта грузятся с ошибками
+http://help-ru.tilda.ws/fontsviafile

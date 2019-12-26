@@ -20,7 +20,7 @@
           <b-form-input id="input-1" v-model="name" :state="state" trim></b-form-input>
       </b-form-group>
             
-      <popper
+      <!--<popper
           trigger="clickToToggle"
           :options="{
             placement: 'top',
@@ -36,7 +36,7 @@
           <button slot="reference">
             Reference Element
           </button>
-        </popper>     
+        </popper>     -->
 
     </div>
   </div>
@@ -49,8 +49,8 @@ import FormModal from './FormModal'
 import Test from './test'
 import Test2 from './Test2'
 
-import Popper from 'vue-popperjs';
-import 'vue-popperjs/dist/vue-popper.css';
+//import Popper from 'vue-popperjs';
+//import 'vue-popperjs/dist/vue-popper.css';
 
 export default {
     
@@ -60,7 +60,7 @@ export default {
     appFormModal: FormModal,
     appTest: Test,
     appTest2: Test2,
-    popper: Popper
+    //popper: Popper
 
   },
   computed: {
