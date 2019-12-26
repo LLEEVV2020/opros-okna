@@ -1,26 +1,54 @@
+@import "variables";
+
+html { 
+    font-size: 62.5%; 
+    @media all and (min-width: $windows-sm) {
+        font-size: 58%;
+    }
+    
+}
+
 body{
     margin: 0;
+    font-size: 1.6rem;
 }
 *, ::before, ::after{
     box-sizing: border-box;
 }
 
 .smartquiz{
+    overflow: auto;
+    height: 100%;
     position: fixed;
     width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    overflow-y: auto;
-    @supports (display: grid) {
-
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    @media all and (min-width: $windows-sm) {
+        background: #fff;
+        box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        position: relative;
+        transition: 0.3s ease-in-out;
+        transform: translateY(25px);
+        width: 690px;
+        margin: 0 auto;
+        align-items: stretch;
     }
+    
+
 }
 .smartquizlayout{
     font-family: 'Roboto', Arial;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
     button{
         border: 0px;
         cursor: pointer;
@@ -29,6 +57,20 @@ body{
     }
     a{
         text-decoration: none;
+    }
+    .growing-sale-wrapper{
+        width: 100%;
+        @media all and (min-width: $windows-sm) {
+            width: 30%;
+            background: #f3f3f3;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-bottom: 55px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 31px;
+            position: relative;
+        }
     }
     .growing-sale{
         border: 2px solid #bbdea0;
@@ -40,28 +82,47 @@ body{
         padding: 10px 13px;
         margin: 10px;
         margin-bottom: 12px;
-
+        
         i{
             color: #63d60e;
-            font-size: 14px;
+            font-size: $fsize-3;
             font-style: normal;
             padding-right: 4px;
+            @media all and (min-width: $windows-sm) {
+                font-weight: 700;
+                font-size: 1.15rem;
+                padding-right: 0;
+            }
         }
     }
     .motivator-title{
         max-width: 93px;
-        font-size: 15px;
+        font-size: $fsize-4;
         padding-left: 5px;
+        @media all and (min-width: $windows-sm) {
+            padding-left: 0;
+            font-size: 1.2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 45px;
+        }
     }
     .motivator-summ{
         //flex: 1;
         font-weight: bold;
         position: relative;
+        @media all and (min-width: $windows-sm) {
+            text-align: right;
+        }
         span{
             display: block;
             text-align: right;
-            font-size: 17px;
+            font-size: $fsize-5;
             margin-top: 4px;
+            @media all and (min-width: $windows-sm) {
+                font-size: 1.5rem;
+            }
         }
     }
     .svg-growing {
@@ -69,6 +130,10 @@ body{
         height: 17px;
         transform: translate3d(0, 30%, 0);
         animation: SmartQuizAnimfadeInUp .7s infinite linear;
+        @media all and (min-width: $windows-sm) {
+            width: 13px;
+            height: 13px;  
+        }
     }
     .quiz-close{
         background-image: url(../img/quiz/close-window.svg);
@@ -78,7 +143,15 @@ body{
         background-size: contain;
         transition: all .2s linear;
 		margin-left: auto;
-		margin-right: 10px;
+        margin-right: 10px;
+        @media all and (min-width: $windows-sm) {
+            position: absolute;
+            right: 22px;
+            top: 18px;
+            width: 18px;
+            height: 18px;
+            margin-right: 0;
+        }
 		&:hover {
 			transform: rotate(90deg);
 			transition: all .2s linear;
@@ -91,16 +164,28 @@ body{
         padding-top: 12px;
         text-align: center;
         padding-bottom: 60px;
+        width: 100%;
+        @media all and (min-width: $windows-sm) {
+            width: 70%;
+            text-align: left;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            @include supports-padding(2.5rem);
+        }
     }
     .quiz-title{
-        font-size: 22px;
+        font-size: $fsize-7;
         line-height: 1.22;
         font-weight: 500;
         margin-bottom: 10px;
+        @media all and (min-width: $windows-sm) {
+            padding-right: 24px;
+        }
+        
     }
     .quiz-desc{
         color: #878787;
-        font-size: 12px;
+        font-size: $fsize-1;
         margin-bottom: 20px;
     }
     .quiz-text{
@@ -112,16 +197,27 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start;
     }
-    $width-item: 136px;
+    
 
     @supports (display: grid) {
         .quiz-panel-images{
             display: grid;
-            grid-template-columns: $width-item $width-item;
-            column-gap: 10px;
+            grid-template-columns: $width-item ;
+            column-gap: 2rem;
+            @media all and (min-width: 360px) {
+                grid-template-columns: $width-item $width-item;
+            }
             @media all and (min-width: 460px) {
                 grid-template-columns: $width-item $width-item $width-item;
+            }
+            @media all and (min-width: 660px) {
+                grid-template-columns: $width-item $width-item $width-item $width-item;
+            }
+            @media all and (min-width: $windows-sm) {
+                grid-template-columns: 1fr 1fr 1fr;
+                min-height: 422px;
             }
         }
        
@@ -137,6 +233,12 @@ body{
         @supports (display: grid) {
             margin-right: 0;
             margin-left: 0;
+        }
+        @media all and (min-width: $windows-sm) {
+            margin-right: 7px;
+            margin-left: 7px;
+            @include supports-grid(100%);
+            
         }
         &::after{
             content: '';
@@ -188,6 +290,9 @@ body{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         position: relative;
+        @media all and (min-width: $windows-sm) {
+            height: 120px;
+        }
     }
     .check-icon{
         box-shadow: 0 0 5px 1px rgba(194, 194, 194, 0.31);
@@ -207,7 +312,7 @@ body{
         padding-left: 15px;
         padding-right: 15px;
         width: 100%;
-        font-size: 14px;
+        font-size: $fsize-3;
         padding-top: 13px;
         padding-bottom: 15px;
         text-align: center;
@@ -239,8 +344,12 @@ body{
         width: 100%;
         height: 160px;
         margin-top: auto;
-        font-size: 13px;
+        font-size: $fsize-2;
         color: #a5a5a5;
+        @media all and (min-width: $windows-sm) {
+            background: #fff;
+        }
+        
         a{
             color: rgb(232, 57, 20);
             border-bottom: 1px solid rgba(232, 57, 20, 0.3);
@@ -279,14 +388,14 @@ body{
     .steps-paginator{
         display: flex;
         align-items: center;
-        font-size: 14px;
+        font-size: $fsize-3;
         span{
             color: #797979;
             padding: 0 2px;
         }
         .number-left{
             color: rgb(232, 57, 20);
-            font-size: 20px;
+            font-size: $fsize-6;
         }
     }
     .btn-next{
@@ -295,7 +404,7 @@ body{
         text-align: center;
         width: 155px;
         
-        font-size: 12px;
+        font-size: $fsize-1;
         
         margin: 0;
         background: rgb(232, 57, 20);
