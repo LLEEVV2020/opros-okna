@@ -14,12 +14,14 @@ $fsize-7: 2.2rem;
 
 // размеры разрешения экрана
 $windows-sm: 740px;
+$windows-lg: 1200px;
 
 // Узкое места
 @mixin supports-grid ($width) {
     @supports (display: grid) {
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 0;
         width: $width;
     }
 }

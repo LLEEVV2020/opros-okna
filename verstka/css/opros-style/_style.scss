@@ -5,6 +5,9 @@ html {
     @media all and (min-width: $windows-sm) {
         font-size: 58%;
     }
+    @media all and (min-width: $windows-lg) {
+        font-size: 70.5%; 
+    }
     
 }
 
@@ -34,10 +37,15 @@ body{
         margin-bottom: 45px;
         position: relative;
         transition: 0.3s ease-in-out;
-        transform: translateY(25px);
+        transform: translateY(2vh);
         width: 690px;
         margin: 0 auto;
         align-items: stretch;
+        
+        margin-bottom: 4vh;
+    }
+    @media all and (min-width: $windows-lg) {
+        width: 910px;
     }
     
 
@@ -48,7 +56,13 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 100vh;
+    @media all and (min-width: $windows-sm) {
+        display: flex;
+        align-items: center;
+    }
     
+
     button{
         border: 0px;
         cursor: pointer;
@@ -61,15 +75,29 @@ body{
     .growing-sale-wrapper{
         width: 100%;
         @media all and (min-width: $windows-sm) {
-            width: 30%;
+            width: 31%;
             background: #f3f3f3;
             border-top-left-radius: 5px;
             border-bottom-left-radius: 5px;
-            padding-bottom: 55px;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 31px;
+            padding-top: 25px;
+            padding-top: 2.75rem;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            
+            min-height: 55.85rem;
+        }
+
+        .steps-paginator, .character{
+            display: none;
+        }
+        @media all and (min-width: $windows-sm) {
+            .character{
+                display: block;
+            }
+            .steps-paginator{
+                display: flex;
+            }
         }
     }
     .growing-sale{
@@ -82,7 +110,15 @@ body{
         padding: 10px 13px;
         margin: 10px;
         margin-bottom: 12px;
-        
+        position: relative;
+        @media all and (min-width: $windows-sm) {
+            margin-left: 3.8rem;
+            margin-right: 3.8rem;
+            margin-top: 0;
+            margin-bottom: 1.8rem;
+            padding-top: 0.8rem;
+            padding-bottom: 1.1rem;
+        }
         i{
             color: #63d60e;
             font-size: $fsize-3;
@@ -90,9 +126,32 @@ body{
             padding-right: 4px;
             @media all and (min-width: $windows-sm) {
                 font-weight: 700;
-                font-size: 1.15rem;
+                font-size: 1.2rem;
                 padding-right: 0;
             }
+        }
+    }
+    .character{
+        position: relative;
+        width: 100%;
+        background-size: cover;
+        background-color: #f3f3f3;
+        background-position: center;
+        overflow: hidden;
+        margin-top: auto;
+        &:after {
+            background: linear-gradient(to bottom, rgba(243,243,243,1) 0%,rgba(243,243,243,0) 100%);
+            content: '';
+            display: block;
+            width: 100%;
+            height: 15%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        img{
+            max-width: 100%;
+            display: block;
         }
     }
     .motivator-title{
@@ -107,6 +166,9 @@ body{
             transform: translateY(-50%);
             max-width: 45px;
         }
+        @media all and (min-width: $windows-lg) {
+            font-size: 1.26rem;
+        }
     }
     .motivator-summ{
         //flex: 1;
@@ -114,6 +176,7 @@ body{
         position: relative;
         @media all and (min-width: $windows-sm) {
             text-align: right;
+            width: 100%;
         }
         span{
             display: block;
@@ -121,7 +184,10 @@ body{
             font-size: $fsize-5;
             margin-top: 4px;
             @media all and (min-width: $windows-sm) {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+                
+                margin-top: 0.2rem;
+                font-weight: 500;
             }
         }
     }
@@ -133,6 +199,7 @@ body{
         @media all and (min-width: $windows-sm) {
             width: 13px;
             height: 13px;  
+            margin-bottom: 2px;
         }
     }
     .quiz-close{
@@ -166,10 +233,10 @@ body{
         padding-bottom: 60px;
         width: 100%;
         @media all and (min-width: $windows-sm) {
-            width: 70%;
+            width: 69%;
             text-align: left;
             padding-top: 2.5rem;
-            padding-bottom: 2.5rem;
+            padding-bottom: 0;
             @include supports-padding(2.5rem);
         }
     }
@@ -177,7 +244,7 @@ body{
         font-size: $fsize-7;
         line-height: 1.22;
         font-weight: 500;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         @media all and (min-width: $windows-sm) {
             padding-right: 24px;
         }
@@ -187,10 +254,17 @@ body{
         color: #878787;
         font-size: $fsize-1;
         margin-bottom: 20px;
+        margin-bottom: 3rem;
     }
     .quiz-text{
         font-weight: 500;
-        margin-bottom: 32px;
+        margin-bottom: 3.4rem;
+        @media all and (min-width: $windows-sm) {
+            font-size: 1.8rem;
+        }
+        span{
+            color: rgb(232, 57, 20);
+        }
     }
     .quiz-panel-images{
         margin: 0 auto;
@@ -206,6 +280,7 @@ body{
             display: grid;
             grid-template-columns: $width-item ;
             column-gap: 2rem;
+            row-gap: 2rem;
             @media all and (min-width: 360px) {
                 grid-template-columns: $width-item $width-item;
             }
@@ -217,7 +292,7 @@ body{
             }
             @media all and (min-width: $windows-sm) {
                 grid-template-columns: 1fr 1fr 1fr;
-                min-height: 422px;
+                //min-height: 362px;
             }
         }
        
@@ -291,7 +366,8 @@ body{
         border-top-right-radius: 5px;
         position: relative;
         @media all and (min-width: $windows-sm) {
-            height: 120px;
+            
+            height: 11.85rem;
         }
     }
     .check-icon{
@@ -324,10 +400,21 @@ body{
         align-items: center;
         justify-content: center;
         
+        @media all and (min-width: $windows-sm) {
+            min-height: 5.8rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 1.2rem;
+        }
+        
         span{
             color: #000000;
             border-bottom: 1px dotted #000000;
             line-height: 21px; 
+            @media all and (min-width: $windows-sm) {
+                line-height: 14px;
+            }
+            
         }
     }
 
@@ -348,6 +435,17 @@ body{
         color: #a5a5a5;
         @media all and (min-width: $windows-sm) {
             background: #fff;
+            height: auto;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            padding: 4.5rem 2.5rem 3.5rem;
+            div{
+                width: 30%;
+                text-align: left;
+            }
         }
         
         a{
@@ -371,10 +469,24 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media all and (min-width: $windows-sm) {
+            display: none;
+        }
     }
     .btn-prev{
        padding: 10px 0;
-        
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-right: auto;
+        margin-left: 2rem;
+       color: #272727;
+       font-size: 1.4rem;
+       span{
+        border-bottom: 1px solid #cbcbcb;
+        padding-bottom: 4px; 
+        margin-left: 6px;
+       }
     }
     .arrow-prev {
         display: block;
@@ -384,11 +496,19 @@ body{
         background-image: url(../img/quiz/step-arrow.svg);
         background-size: cover;
         transform: rotate(-180deg);
+        @media all and (min-width: $windows-sm) {
+            width: 14px;
+            height: 13px;
+        }
     }
     .steps-paginator{
         display: flex;
         align-items: center;
         font-size: $fsize-3;
+        @media all and (min-width: $windows-sm) {
+            justify-content: center;
+            font-size: 1.6rem;
+        }
         span{
             color: #797979;
             padding: 0 2px;
@@ -396,6 +516,10 @@ body{
         .number-left{
             color: rgb(232, 57, 20);
             font-size: $fsize-6;
+            @media all and (min-width: $windows-sm) {
+                font-size: 2.2rem;
+            }
+            
         }
     }
     .btn-next{
@@ -403,16 +527,24 @@ body{
         padding: 5px 0 5px 0;
         text-align: center;
         width: 155px;
-        
         font-size: $fsize-1;
-        
         margin: 0;
         background: rgb(232, 57, 20);
         border-radius: 100px;
         color: #fff;
         display: flex;
         align-items: center;
-    justify-content: center;
+        justify-content: center;
+        &:hover {
+            transition: all .2s linear;
+            box-shadow: 0 10px 25px 4px rgba(232, 57, 20, 0.3);
+            background: rgb(232, 57, 20) ;
+        }
+        @media all and (min-width: $windows-sm) {
+            font-size: 1.3rem;
+            width: 180px;
+            height: 40px;
+        }
     }
     .arrow-next{
         display: inline-block;
