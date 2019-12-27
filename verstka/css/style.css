@@ -242,12 +242,12 @@ body {
 
 @media all and (min-width: 740px) {
   .smartquizlayout .growing-sale {
-    margin-left: 3.8rem;
-    margin-right: 3.8rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
     margin-top: 0;
     margin-bottom: 1.8rem;
-    padding-top: 0.8rem;
-    padding-bottom: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.9rem;
   }
 }
 
@@ -355,9 +355,9 @@ body {
 
 @media all and (min-width: 740px) {
   .smartquizlayout .svg-growing {
-    width: 13px;
-    height: 13px;
-    margin-bottom: 2px;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-bottom: 0.21rempx;
   }
 }
 
@@ -404,6 +404,7 @@ body {
   .smartquizlayout .quiz-right {
     width: 69%;
     text-align: left;
+    z-index: 1;
     padding-top: 2.5rem;
     padding-bottom: 0;
   }
@@ -848,8 +849,8 @@ body {
 @media all and (min-width: 740px) {
   .smartquizlayout .btn-next {
     font-size: 1.3rem;
-    width: 180px;
-    height: 40px;
+    width: 19.4rem;
+    height: 4.1rem;
   }
 }
 

@@ -112,12 +112,12 @@ body{
         margin-bottom: 12px;
         position: relative;
         @media all and (min-width: $windows-sm) {
-            margin-left: 3.8rem;
-            margin-right: 3.8rem;
+            margin-left: 3.5rem;
+            margin-right: 3.5rem;
             margin-top: 0;
             margin-bottom: 1.8rem;
-            padding-top: 0.8rem;
-            padding-bottom: 1.1rem;
+            padding-top: 0.6rem;
+            padding-bottom: 0.9rem;
         }
         i{
             color: #63d60e;
@@ -197,9 +197,9 @@ body{
         transform: translate3d(0, 30%, 0);
         animation: SmartQuizAnimfadeInUp .7s infinite linear;
         @media all and (min-width: $windows-sm) {
-            width: 13px;
-            height: 13px;  
-            margin-bottom: 2px;
+            width: 1.3rem;
+            height: 1.3rem;
+            margin-bottom: 0.21rempx;
         }
     }
     .quiz-close{
@@ -235,6 +235,7 @@ body{
         @media all and (min-width: $windows-sm) {
             width: 69%;
             text-align: left;
+            z-index: 1;
             padding-top: 2.5rem;
             padding-bottom: 0;
             @include supports-padding(2.5rem);
@@ -542,8 +543,8 @@ body{
         }
         @media all and (min-width: $windows-sm) {
             font-size: 1.3rem;
-            width: 180px;
-            height: 40px;
+            width: 19.4rem;
+            height: 4.1rem;
         }
     }
     .arrow-next{
