@@ -1,13 +1,15 @@
 <template>
-  <div class="smartquizLayout">
-    <div  class="smartquiz">
-              
+  <div class="">
+
+    <app-Form-Opros></app-Form-Opros>
+
+
+    <div  class="smartquiz" style="display: none;">      
       <app-form-sending></app-form-sending>
       <hr>
       <app-Form-Modal v-if="answer"> </app-Form-Modal>
       <app-Test></app-Test>
-      <app-Test2></app-Test2>
-
+      
       <b-form-group
           id="fieldset-1"
           description="Let us know your name."
@@ -47,7 +49,7 @@
 import FormSending from './FormSending'
 import FormModal from './FormModal'
 import Test from './test'
-import Test2 from './Test2'
+import FormOpros from './FormOpros'
 
 //import Popper from 'vue-popperjs';
 //import 'vue-popperjs/dist/vue-popper.css';
@@ -59,7 +61,7 @@ export default {
     appFormSending: FormSending,
     appFormModal: FormModal,
     appTest: Test,
-    appTest2: Test2,
+    appFormOpros: FormOpros,
     //popper: Popper
 
   },

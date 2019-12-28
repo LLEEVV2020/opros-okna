@@ -45,7 +45,7 @@ export default {
               data: {
                   
                   firstName: val.state.postBody,
-                  lastName: val.state.postTitle,
+                  phone: val.state.postTitle,
                   Vse_dannie: val
                   
               }

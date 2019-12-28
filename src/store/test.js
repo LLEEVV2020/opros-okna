@@ -1,36 +1,22 @@
 import { genVuexModels } from 'vuex-models'
-const gggg = [
-  {},
-  {},
-  {}
-  /*[
-    'Поставить окно', 
-    'Остеклить балкон'
-  ],
-  [
-    'В квартиру', 
-    'В частный дом'
-  ],
-  [
-    'В панельный дом', 
-    'В кирпичный дом'
-  ],
-  [
-    'Veka', 
-    'Rehau',
-    'KBE', 
-    'Artec', 
-    'Неважно'
-  ],
-  [
-    'Белое', 
-    'Цветное (с ламинацией)'
-  ],
-  [
-    'Да', 
-    'Нет'
-  ],*/
-]
+
+/*let leftimg1 = '157.jpg'
+let leftimg2 = '165.jpg'
+let leftimg3 = '149.jpg'
+let leftimg4 = '164.jpg'
+let leftimg5 = '161.jpg'
+let leftimg6 = '156.jpg'
+let leftimg7 = '155.jpg'
+let leftimg8 = '158.jpg'*/
+
+let leftimg1 = '88.jpg'
+let leftimg2 = '109.jpg'
+let leftimg3 = '99.jpg'
+let leftimg4 = '86.jpg'
+let leftimg5 = '98.jpg'
+let leftimg6 = '97.jpg'
+let leftimg7 = '85.jpg'
+let leftimg8 = '106.jpg'
 
 export default {
   strict: true,
@@ -57,7 +43,7 @@ export default {
     poll: [
       {/** 1 */
         name: 'Выберите, поставить окно или остеклить балкон?', 
-        leftimg: '157.jpg',
+        leftimg: leftimg1,
         list: [
           {
             img: '5c1cc65da5e8e2.57496163.png',
@@ -73,7 +59,7 @@ export default {
       },
       {/** 2 */
         name: 'Будем ставить в квартиру или в частный дом?', 
-        leftimg: '165.jpg',
+        leftimg: leftimg2,
         list: [
           {
             img: '5c1cc6974f5ff9.06336966.jpeg',
@@ -89,7 +75,7 @@ export default {
       },
       {/** 3 */
         name: 'В какой дом нужна установка: в панельный или в кирпичный?', 
-        leftimg: '149.jpg',
+        leftimg: leftimg3,
         list: [
           {
             img: '5c1cc6c936c049.15542903.jpeg',
@@ -105,7 +91,7 @@ export default {
       },
       {/** 4 */
         name: 'Какой профиль интересует?', 
-        leftimg: '164.jpg',
+        leftimg: leftimg4,
         list: [
           {
             img: '5c1cd3ec2f1482.08448542.jpeg',
@@ -136,7 +122,7 @@ export default {
       },
       {/** 5 */                
         name: 'Выберите цвет изделия', 
-        leftimg: '161.jpg',
+        leftimg: leftimg5,
         list: [
           {
             img: '5c1cc7eb382994.72069783.jpeg',
@@ -152,7 +138,7 @@ export default {
       },
       {/** 6 */
         name: 'Вам нужна установка?', 
-        leftimg: '156.jpg',
+        leftimg: leftimg6,
         list: [
           {
             
@@ -168,7 +154,7 @@ export default {
       },
       {/** 7 */
         name: 'С отделкой или без отделки?', 
-        leftimg: '155.jpg',
+        leftimg: leftimg7,
         list: [
           {
             
@@ -183,7 +169,7 @@ export default {
       },
       {/** 8 */
         name: 'Оставьте свой номер телефона и мы свяжемся с вами в ближайшие 10 минут!', 
-        leftimg: '155.jpg',
+        leftimg: leftimg8,
         list: [
           {
             

@@ -1,0 +1,34 @@
+// размер блоков выбора
+$width-item: 136px;
+
+
+// размеры шрифтов
+$fsize-1: 1.2rem;
+$fsize-2: 1.3rem;
+$fsize-3: 1.4rem;
+$fsize-4: 1.5rem;
+$fsize-5: 1.7rem;
+$fsize-6: 2.0rem;
+$fsize-7: 2.2rem;
+
+
+// размеры разрешения экрана
+$windows-sm: 740px;
+$windows-lg: 1200px;
+
+// Узкое места
+@mixin supports-grid ($width) {
+    @supports (display: grid) {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        width: $width;
+    }
+}
+
+@mixin supports-padding ($paddingright) {
+    @supports (display: grid) {
+        padding-left: $paddingright;
+        padding-right: $paddingright;
+    }
+}

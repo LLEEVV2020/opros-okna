@@ -259,7 +259,9 @@ body{
     }
     .quiz-text{
         font-weight: 500;
-        margin-bottom: 3.4rem;
+        //padding-bottom: 3.4rem;
+        line-height: 1.2;
+        min-height: 7.4rem;
         @media all and (min-width: $windows-sm) {
             font-size: 1.8rem;
         }
@@ -475,7 +477,6 @@ body{
         }
     }
     .btn-prev{
-       padding: 10px 0;
        display: flex;
        align-items: center;
        justify-content: center;
