@@ -14,6 +14,7 @@ html {
 body{
     margin: 0;
     font-size: 1.6rem;
+    line-height: 1.3;
 }
 *, ::before, ::after{
     box-sizing: border-box;
@@ -121,7 +122,7 @@ body{
         }
         i{
             color: #63d60e;
-            font-size: $fsize-3;
+            font-size: /*$fsize-3*/1.45rem;
             font-style: normal;
             padding-right: 4px;
             @media all and (min-width: $windows-sm) {
@@ -167,7 +168,7 @@ body{
             max-width: 45px;
         }
         @media all and (min-width: $windows-lg) {
-            font-size: 1.26rem;
+            font-size: 1.3rem;
         }
     }
     .motivator-summ{
@@ -194,12 +195,12 @@ body{
     .svg-growing {
         width: 17px;
         height: 17px;
-        transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, -30%, 0);
         animation: SmartQuizAnimfadeInUp .7s infinite linear;
         @media all and (min-width: $windows-sm) {
             width: 1.3rem;
             height: 1.3rem;
-            margin-bottom: 0.21rempx;
+            //margin-bottom: 0.21rem;
         }
     }
     .quiz-close{
@@ -261,7 +262,8 @@ body{
         font-weight: 500;
         //padding-bottom: 3.4rem;
         line-height: 1.2;
-        min-height: 7.4rem;
+        // min-height: 7.4rem;
+        margin-bottom: 2rem;
         @media all and (min-width: $windows-sm) {
             font-size: 1.8rem;
         }
@@ -341,7 +343,9 @@ body{
                 background: #fff;
                 span{
                     color: rgb(232, 57, 20) !important;
-                    border-bottom-color: rgb(232, 57, 20) !important;
+                    &::before{
+                        background-image: radial-gradient(rgb(232, 57, 20) 20%, transparent 20%);
+                    }
                 }
             }
             .check-icon{
@@ -388,8 +392,8 @@ body{
         z-index: 1;
     }
     .panel-text{
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
         width: 100%;
         font-size: $fsize-3;
         padding-top: 13px;
@@ -412,8 +416,20 @@ body{
         
         span{
             color: #000000;
-            border-bottom: 1px dotted #000000;
+            //border-bottom: 1px dotted #000000;
             line-height: 21px; 
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -0.4rem;
+                left: 0;
+                width: 100%;
+                height: 0.2rem;
+                background-repeat: repeat-x;
+                background-image: radial-gradient(#000 20%, transparent 20%);
+                background-size: 0.25rem 0.25rem;
+            }
             @media all and (min-width: $windows-sm) {
                 line-height: 14px;
             }
@@ -480,10 +496,12 @@ body{
        display: flex;
        align-items: center;
        justify-content: center;
-       margin-right: auto;
-        margin-left: 2rem;
+       margin-left: 2rem;
        color: #272727;
        font-size: 1.4rem;
+       @media all and (min-width: $windows-sm) {
+        margin-right: auto;
+       }
        span{
         border-bottom: 1px solid #cbcbcb;
         padding-bottom: 4px; 
