@@ -86,7 +86,7 @@ body{
             display: flex;
             flex-direction: column;
             
-            min-height: 55.85rem;
+            min-height: 57.85rem;
         }
 
         .steps-paginator, .character{
@@ -265,6 +265,7 @@ body{
         // min-height: 7.4rem;
         margin-bottom: 2rem;
         @media all and (min-width: $windows-sm) {
+            margin-bottom: 2.5rem;
             font-size: 1.8rem;
         }
         span{
@@ -277,6 +278,8 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start;
+        
+
     }
     
 
@@ -310,6 +313,11 @@ body{
         position: relative;
         margin-right: 5px;
         margin-left: 5px;
+        z-index: 2;
+          
+        transform: translate3d(0, 3rem, 0);
+        animation: SmartQuizAnimfadeInUp 4s ease 1;
+        
         @supports (display: grid) {
             margin-right: 0;
             margin-left: 0;
@@ -364,6 +372,27 @@ body{
             }
         }
     }
+    .display_new{
+        grid-column-start: 1;
+        grid-column-end: none;
+        width: 100%;
+        .panel-text{
+            justify-content: flex-start;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            @media all and (min-width: $windows-sm) {
+                min-height: 7.5rem;
+            }
+        }
+        .check-icon {
+            position: static;
+            transform: none;
+            width: 4rem;
+            height: 4rem;
+            background-size: 2rem;
+            margin-right: 1.7rem;
+        }
+    }
     .panel-img{
         width: 100%;
         height: 145px;
@@ -390,6 +419,12 @@ body{
         border-radius: 50%;
         transform: translateY(50%);
         z-index: 1;
+        @media all and (min-width: $windows-lg) {
+            width: 4rem;
+            height: 4rem;
+            background-size: 2rem;
+        }
+
     }
     .panel-text{
         padding-left: 5px;
@@ -412,6 +447,10 @@ body{
             padding-top: 0;
             padding-bottom: 0;
             font-size: 1.2rem;
+        }
+        @media all and (min-width: $windows-lg) {
+            min-height: 6.5rem;
+            
         }
         
         span{
@@ -577,11 +616,16 @@ body{
 }
 
 
+
+
+// анимация для основных важных элементов
 @keyframes SmartQuizAnimfadeInUp {
     to {
-        transform: translate3d(0, 1px, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
+
+
 /*
 https://codepen.io/stidlivii/pen/xxbgyGx?editors=1100
 

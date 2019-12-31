@@ -32,3 +32,13 @@ $windows-lg: 1200px;
         padding-right: $paddingright;
     }
 }
+
+@keyframes TopAnimfadeInUp {
+   /* from{
+        transform: translateY(3rem);
+    }*/
+    to {
+        transform: translateY(0);
+        //animation-play-state: paused;
+    }
+}

@@ -42,12 +42,15 @@
                     
                     <div class="panel-images-item"
                      v-for="(item) in poll[perelitiv].list" 
-                    :key="item.id">
+                    :key="item.id"
+                    :class="{ display_new: !item.img}"
+                    >
                         <div v-if="item.img" class="panel-img" :style="'background-image: url(../img/quiz/' + item.img + ');'">
                             <div class="check-icon"></div>
                         </div>
                         
-                        <div class="panel-text">    
+                        <div class="panel-text" >  
+                              <div class="check-icon" v-if="!item.img"></div>
                             <span>{{ item.text }}</span>
                         </div>
                     </div>
@@ -115,6 +118,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  
+  .display_new{
+        grid-column-start: 1;
+    grid-column-end: none;
+  }
 
 </style>
