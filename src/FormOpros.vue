@@ -38,11 +38,12 @@
                 <div class="quiz-title">Пройдите опрос и получите расчет стоимости и скидку 600 руб.</div>
                 <div class="quiz-desc">Среднее время прохождения опроса 2 минуты</div>
                 <div class="quiz-text"><span v-if="tableVisibilitylength !== perelitiv">{{perelitiv + 1}}.</span> {{ poll[perelitiv].name }}</div>
-                <div  class="quiz-panel-images"  >
+                <transition-group  class="quiz-panel-images"  
+                 name="list" tag="div">>
                     
                     <div class="panel-images-item"
                      v-for="(item) in poll[perelitiv].list" 
-                    :key="item.id"
+                    :key="item"
                     :class="{ display_new: !item.img}"
                     >
                         <div v-if="item.img" class="panel-img" :style="'background-image: url(../img/quiz/' + item.img + ');'">
@@ -55,7 +56,7 @@
                         </div>
                     </div>
                     
-                </div>
+                </transition-group>
                 
             </div>
             
@@ -118,9 +119,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .display_new{
-        grid-column-start: 1;
-    grid-column-end: none;
-  }
+.list-enter-active {
+  transition: all 1s;
+}
+.list-leave-to{
+  //opacity: 0;
+  //transform: translateY(30px);
+  display: none;
+}
 
+
+.list-enter  {
+  opacity: 0;
+  transform: translateY(30px);
+}
 </style>
