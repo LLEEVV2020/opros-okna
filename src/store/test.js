@@ -39,18 +39,20 @@ export default {
     cottelkoi: false,
     bezottdelki: false,
 
-    pageName: 'Dog',
+    
     poll: [
       {/** 1 */
         name: 'Выберите, поставить окно или остеклить балкон?', 
         leftimg: leftimg1,
         list: [
           {
+            id: 1,
             img: '5c1cc65da5e8e2.57496163.png',
             text: 'Поставить окно',
             checkbox: false
           },
           {
+            id: 2,
             img: '5c1cc65e0c9de5.98850471.png',
             text: 'Остеклить балкон',
             checkbox: false
@@ -62,11 +64,13 @@ export default {
         leftimg: leftimg2,
         list: [
           {
+            id: 3,
             img: '5c1cc6974f5ff9.06336966.jpeg',
             text: 'В квартиру',
             checkbox: false
           },
           {
+            id: 4,
             img: '5c1cc697690c47.91064385.jpeg',
             text: 'В частный дом',
             checkbox: false
@@ -78,11 +82,13 @@ export default {
         leftimg: leftimg3,
         list: [
           {
+            id: 5,
             img: '5c1cc6c936c049.15542903.jpeg',
             text: 'В панельный дом',
             checkbox: false
           },
           {
+            id: 6,
             img: '5c1cc6c9462524.33902767.jpeg',
             text: 'В кирпичный дом',
             checkbox: false
@@ -94,26 +100,31 @@ export default {
         leftimg: leftimg4,
         list: [
           {
+            id: 7, 
             img: '5c1cd3ec2f1482.08448542.jpeg',
             text: 'Veka',
             checkbox: false
           },
           {
+            id: 8,
             img: '5c1cc743d27ad0.03039724.jpeg',
             text: 'Rehau',
             checkbox: false
           },
           {
+            id: 9,
             img: '5c1cc743e8be82.40256857.jpeg',
             text: 'KBE',
             checkbox: false
           },
           {
+            id: 10,
             img: '5c1cd1b2f371d7.66492810.jpeg',
             text: 'Artec',
             checkbox: false
           },
           {
+            id: 11,
             img: '5c1cd33fe72b84.46786573.jpeg',
             text: 'Неважно',
             checkbox: false
@@ -125,11 +136,13 @@ export default {
         leftimg: leftimg5,
         list: [
           {
+            id: 12,
             img: '5c1cc7eb382994.72069783.jpeg',
             text: 'Белое',
             checkbox: false
           },
           {
+            id: 13, 
             img: '5c1cc7e2ef5ed3.20291533.jpeg',
             text: 'Цветное (с ламинацией)',
             checkbox: false
@@ -141,11 +154,12 @@ export default {
         leftimg: leftimg6,
         list: [
           {
-            
+            id: 14,
             text: 'Да',
             checkbox: false
           },
           {
+            id: 15,
             img: null,
             text: 'Нет',
             checkbox: false
@@ -157,11 +171,12 @@ export default {
         leftimg: leftimg7,
         list: [
           {
-            
+            id: 16,
             text: 'Да',
             checkbox: false
           },
           {
+            id: 17,
             text: 'Нет',
             checkbox: false
           }
@@ -172,7 +187,7 @@ export default {
         leftimg: leftimg8,
         list: [
           {
-            
+            id: 18,
           }
         ]
       }

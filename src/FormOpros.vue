@@ -41,20 +41,36 @@
                 <transition-group  class="quiz-panel-images"  
                  name="list" tag="div">>
                     
-                    <div class="panel-images-item"
-                     v-for="(item) in poll[perelitiv].list" 
-                    :key="item"
-                    :class="{ display_new: !item.img}"
+                    <div class="panel-images-item-wrapper"
+                      v-for="item in poll[perelitiv].list" 
+                      :key="item.id"
+                      :class="{ display_new: !item.img}"
                     >
-                        <div v-if="item.img" class="panel-img" :style="'background-image: url(../img/quiz/' + item.img + ');'">
-                            <div class="check-icon"></div>
+                      <div v-if="item.text">
+                        <input type="checkbox"  v-model="item.checkbox"  />
+                        <div class="panel-images-item"
+                        >
+                          
+                          <div v-if="item.img" class="panel-img" :style="'background-image: url(../img/quiz/' + item.img + ');'">
+                              <div class="check-icon"></div>
+                          </div>
+                          
+                          <div class="panel-text" >  
+                                <div class="check-icon" v-if="!item.img"></div>
+                              <span>{{ item.text }}</span>
+                          </div>
                         </div>
-                        
-                        <div class="panel-text" >  
-                              <div class="check-icon" v-if="!item.img"></div>
-                            <span>{{ item.text }}</span>
-                        </div>
+                      </div>
+
+                      <div v-else>
+                        <input type="text"  placeholder="Телефон" />
+                        <input type="button"  value="submit">
+
+                      </div>
+                      
                     </div>
+                    
+
                     
                 </transition-group>
                 
@@ -122,15 +138,18 @@ export default {
 .list-enter-active {
   transition: all 1s;
 }
-.list-leave-to{
-  //opacity: 0;
-  //transform: translateY(30px);
+
+.list-enter {
+  transform: translateY(30px);
+}
+
+.list-leave, .list-enter{
+  opacity: 0;
+}
+.list-leave{
+  //height: 0;
   display: none;
 }
 
 
-.list-enter  {
-  opacity: 0;
-  transform: translateY(30px);
-}
 </style>
