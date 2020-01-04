@@ -131,12 +131,14 @@ export default {
   },
   methods: {
     wrapperCounterPlus(val){
-      /*let elements = document.querySelectorAll('.js-checkbox');
+      let elements = document.querySelectorAll('.js-checkbox');
 
       for (let elem of elements) {
         console.log(elem); // "тест", "пройден"
-        elem.checked = false
-      }*/
+        //elem.checked = true
+      }
+      //this.$store.commit('Vxm', "noll")
+
       this.counterPlus(val)
     },
     counterPlus(val){
