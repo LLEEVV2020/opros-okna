@@ -8,21 +8,21 @@
                     <div class="motivator-title">Ваша скидка:</div>
                     <div class="motivator-summ">
                         
-                        <i>+ 85.71 руб.</i>
-                        <svg class="svg-growing" viewBox="0 0 30.727 30.727">
+                        <i :class="{ display_none: tableVisibilitylength === perelitiv}">+ 85.71 руб.</i>
+                        <svg :class="{ display_none: tableVisibilitylength === perelitiv}" class="svg-growing" viewBox="0 0 30.727 30.727">
                             <g>
                                 <path d="M2.5,19.393c-0.64,0-1.278-0.244-1.768-0.73c-0.977-0.979-0.977-2.561,0-3.535L15.363,0.498l14.63,14.629   c0.978,0.975,0.978,2.559,0,3.535s-2.56,0.979-3.534,0L15.363,7.568L4.267,18.662C3.781,19.148,3.14,19.393,2.5,19.393z    M29.994,29.496c0.979-0.977,0.979-2.559,0-3.533l-14.63-14.632l-14.63,14.63c-0.978,0.977-0.978,2.561,0,3.535   c0.978,0.977,2.56,0.977,3.535,0L15.363,18.4l11.096,11.096c0.487,0.488,1.129,0.732,1.769,0.732   C28.869,30.229,29.506,29.984,29.994,29.496z" fill="#63d60e"></path>
                             </g>
                         </svg>
                         
-                        <span>257 руб.</span>
+                        <span>{{ Math.round(perelitiv * 85.71)}} руб.</span>
 
                     </div>
                 </div>
 
-                <div class="steps-paginator">
+                <div class="steps-paginator" v-if="tableVisibilitylength !== perelitiv">
                     <span>Шаг:</span>
-                    <span class="number-left">2</span>
+                    <span class="number-left">{{perelitiv + 1}}</span>
                     <span>/</span>
                     <span>7</span>
                 </div>

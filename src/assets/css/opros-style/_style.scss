@@ -212,6 +212,7 @@ body{
         transition: all .2s linear;
 		margin-left: auto;
         margin-right: 10px;
+        z-index: 3;
         @media all and (min-width: $windows-sm) {
             position: absolute;
             right: 22px;
@@ -439,6 +440,9 @@ body{
             background-size: 2rem;
             margin-right: 1.7rem;
         }
+    }
+    .display_none{
+        opacity: 0;
     }
     .panel-img{
         width: 100%;
