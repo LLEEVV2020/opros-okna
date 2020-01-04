@@ -386,6 +386,7 @@ body{
             height: 100%;
             z-index: 3;
             opacity: 0;
+            cursor: pointer;
         }
     }
     input[type="checkbox"]:hover + .panel-images-item{

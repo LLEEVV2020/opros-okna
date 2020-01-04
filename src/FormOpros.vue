@@ -45,9 +45,10 @@
                       v-for="item in poll[perelitiv].list" 
                       :key="item.id"
                       :class="{ display_new: !item.img}"
+                       @click=" wrapperCounterPlus(tableVisibilitylength); "
                     >
                       <div v-if="item.text">
-                        <input type="checkbox"  v-model="item.checkbox"  />
+                        <input type="checkbox"  v-model="item.checkbox"  class="js-checkbox"/>
                         <div class="panel-images-item"
                         >
                           
@@ -63,9 +64,9 @@
                       </div>
 
                       <div v-else>
-                        <input type="text"  placeholder="Телефон" />
-                        <input type="button"  value="submit">
-
+                        <!--<input type="text"  placeholder="Телефон" />
+                        <input type="button"  value="submit">-->
+                        <app-form-sending></app-form-sending>
                       </div>
                       
                     </div>
@@ -97,11 +98,15 @@
 
         </div>
     
+
+      <app-Form-Modal v-if="answer"> </app-Form-Modal>
     </div>
     
 </template>
 
 <script>
+import FormSending from './FormSending'
+import FormModal from './FormModal'
 import { mapVuexModels } from 'vuex-models'
 
 export default {
@@ -115,9 +120,25 @@ export default {
     ...mapVuexModels([      
       'tableVisibilitylength',
       'poll'
-    ])
+    ]),
+    answer(){
+        return this.$store.getters.answer
+    }
   },
-   methods: {
+  components: {
+    appFormSending: FormSending,
+    appFormModal: FormModal
+  },
+  methods: {
+    wrapperCounterPlus(val){
+      /*let elements = document.querySelectorAll('.js-checkbox');
+
+      for (let elem of elements) {
+        console.log(elem); // "тест", "пройден"
+        elem.checked = false
+      }*/
+      this.counterPlus(val)
+    },
     counterPlus(val){
       if(this.perelitiv >= val){
         return this.perelitiv

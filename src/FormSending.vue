@@ -3,7 +3,7 @@
         
         <h1>Отправить почту </h1>
 
-        <!--<input type="text" v-model="updatePostBody" placeholder="имя" class="fffffffffddd"/>-->
+        <input type="text" v-model="updatePostBody" placeholder="имя" class="fffffffffddd"/>
         <input type="text" v-model="updatePhone" placeholder="Телефон" />
         <input type="button" @click="enterMailing()" value="submit">
 

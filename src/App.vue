@@ -71,28 +71,26 @@ export default {
         return this.$store.getters.answer
     },
     state() {
-        return this.name.length >= 4 ? true : false
-      },
-      invalidFeedback() {
-        if (this.name.length > 4) {
-          return ''
-        } else if (this.name.length > 0) {
-          return 'Enter at least 4 characters'
-        } else {
-          return 'Please enter something'
-        }
-      },
-      validFeedback() {
-        return this.state === true ? 'Thank you' : ''
+      return this.name.length >= 4 ? true : false
+    },
+    invalidFeedback() {
+      if (this.name.length > 4) {
+        return ''
+      } else if (this.name.length > 0) {
+        return 'Enter at least 4 characters'
+      } else {
+        return 'Please enter something'
       }
-  }
-
-    ,
-    data() {
-      return {
-        name: ''
-      }
+    },
+    validFeedback() {
+      return this.state === true ? 'Thank you' : ''
     }
+  },
+  data() {
+    return {
+      name: ''
+    }
+  }
 
 }
 </script>
