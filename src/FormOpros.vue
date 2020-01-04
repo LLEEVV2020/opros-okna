@@ -35,8 +35,8 @@
             <!--крстик закрыть--->
             <div class="quiz-close"></div>
             <div class="quiz-right">
-                <div class="quiz-title">Пройдите опрос и получите расчет стоимости и скидку 600 руб.</div>
-                <div class="quiz-desc">Среднее время прохождения опроса 2 минуты</div>
+                <div class="quiz-title" v-if="tableVisibilitylength !== perelitiv">Пройдите опрос и получите расчет стоимости и скидку 600 руб.</div>
+                <div class="quiz-desc" :class="{ display_none: tableVisibilitylength === perelitiv}">Среднее время прохождения опроса 2 минуты</div>
                 <div class="quiz-text"><span v-if="tableVisibilitylength !== perelitiv">{{perelitiv + 1}}.</span> {{ poll[perelitiv].name }}</div>
                 <transition-group  class="quiz-panel-images"  
                  name="list" tag="div">>

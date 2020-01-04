@@ -217,8 +217,8 @@ body{
             position: absolute;
             right: 22px;
             top: 18px;
-            width: 18px;
-            height: 18px;
+            width: 2rem;
+            height: 2rem;
             margin-right: 0;
         }
 		&:hover {
@@ -655,6 +655,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 0;
+        outline: 0;
         &:hover {
             transition: all .2s linear;
             box-shadow: 0 10px 25px 4px rgba(232, 57, 20, 0.3);
@@ -674,6 +676,17 @@ body{
         background-size: cover;
         margin-left: 4px;
     }
+    .panel-images-item-wrapper {
+        .btn-next{
+            @media all and (min-width: $windows-sm) {
+                font-size: 1.4rem;
+                height: 4.6rem;
+                font-family: Arial;
+            }
+        }
+    }
+
+    
 }
 
 

@@ -4,8 +4,9 @@
         <h1>Отправить почту </h1>
 
         <input type="text" v-model="updatePostBody" placeholder="имя" class="fffffffffddd"/>
-        <input type="text" v-model="updatePhone" placeholder="Телефон" />
-        <input type="button" @click="enterMailing()" value="submit">
+        
+        <the-mask mask="###(###)###-##" v-model="updatePhone" placeholder="Телефон" />
+        <input type="button" class="btn-next" @click="enterMailing()" value="Получить скидку">
 
 
         
@@ -15,10 +16,12 @@
 </template>
 
 <script>
-
+import {TheMask} from 'vue-the-mask'
 
 export default {
     
+  components: {TheMask},
+
     computed: {
         
         updatePhone: {
