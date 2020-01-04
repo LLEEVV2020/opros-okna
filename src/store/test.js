@@ -19,9 +19,9 @@ let leftimg7 = '85.jpg'
 let leftimg8 = '106.jpg'
 
 export default {
-  strict: true,
+  //strict: true,
   ...genVuexModels({
-    postavitokno: false,
+    /*postavitokno: false,
     osteklitbalkon: false,
     vkvartiry: false,
     vchasniidom: false,
@@ -37,7 +37,7 @@ export default {
     ystanovkayes: false,
     ystanovkano: false,
     cottelkoi: false,
-    bezottdelki: false,
+    bezottdelki: false,*/
 
     
     poll: [
