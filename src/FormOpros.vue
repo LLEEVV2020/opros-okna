@@ -1,5 +1,5 @@
 <template>
-    
+  <transition name="modal">
     <div class="smartquizlayout">
 
         <div  class="smartquiz">
@@ -33,7 +33,7 @@
             </div>
             
             <!--крстик закрыть--->
-            <div class="quiz-close"></div>
+            <slot name="footer"><div class="quiz-close"></div></slot>
             <div class="quiz-right">
                 <div class="quiz-title" v-if="tableVisibilitylength !== perelitiv">Пройдите опрос и получите расчет стоимости и скидку 600 руб.</div>
                 <div class="quiz-desc" :class="{ display_none: tableVisibilitylength === perelitiv}">Среднее время прохождения опроса 2 минуты</div>
@@ -101,7 +101,8 @@
 
       <app-Form-Modal v-if="answer"> </app-Form-Modal>
     </div>
-    
+  </transition>
+
 </template>
 
 <script>
@@ -131,12 +132,12 @@ export default {
   },
   methods: {
     wrapperCounterPlus(val){
-      let elements = document.querySelectorAll('.js-checkbox');
+      /*let elements = document.querySelectorAll('.js-checkbox');
 
       for (let elem of elements) {
         console.log(elem); // "тест", "пройден"
         //elem.checked = true
-      }
+      }*/
       //this.$store.commit('Vxm', "noll")
 
       this.counterPlus(val)

@@ -14,3 +14,6 @@ https://bootstrap-vue.js.org/docs/components/form
 
 =========vuex============
 https://vuex.vuejs.org/
+
+=========vue-the-mask============
+npm i -S vue-the-mask

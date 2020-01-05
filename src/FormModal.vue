@@ -1,43 +1,41 @@
 <template>
     
-        
-        
-        <transition name="modal">
-            <div class="modal-mask">
-                <div class="modal-wrapper">
-                    <div class="modal-container">
+  <transition name="modal">
+      <div class="modal-mask">
+          <div class="modal-wrapper">
+              <div class="modal-container">
 
-                    <div class="modal-header">
-                        <slot name="header">
-                        <h1>Модальное окно </h1>
-                        </slot>
-                    </div>
+              <div class="modal-header">
+                  <slot name="header">
+                  <h1>Модальное окно </h1>
+                  </slot>
+              </div>
 
-                    <div class="modal-body">
-                        <slot name="body">
-                        <h2>-- подзаголовок --</h2>
-                        </slot>
-                    </div>
+              <div class="modal-body">
+                  <slot name="body">
+                  <h2>-- подзаголовок --</h2>
+                  </slot>
+              </div>
 
-                    <div class="modal-footer">
-                        <slot name="footer">
-                        Закрыть
-                        <button 
-                            class="modal-default-button" 
-                            @click="answer = false"
-                        >
-                            OK
-                        </button>
-                        <input
-                            type="checkbox"
-                            v-model="answer"
-                        >
-                        </slot>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </transition>
+              <div class="modal-footer">
+                  <slot name="footer">
+                  Закрыть
+                  <button 
+                      class="modal-default-button" 
+                      @click="answer = false"
+                  >
+                      OK
+                  </button>
+                  <input
+                      type="checkbox"
+                      v-model="answer"
+                  >
+                  </slot>
+              </div>
+              </div>
+          </div>
+      </div>
+  </transition>
     
 </template>
 
@@ -48,9 +46,7 @@ export default {
    
 
     computed: {
-        
-
-        
+      
         answer: {
             get: function () {
                 return this.$store.getters.answer

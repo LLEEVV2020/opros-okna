@@ -5,7 +5,7 @@
 
 
     <div  class="smartquiz" style="display: none;">      
-      <app-form-sending></app-form-sending>
+      <app-form-sending ></app-form-sending>
       <hr>
       <app-Form-Modal v-if="answer"> </app-Form-Modal>
       <app-Test></app-Test>
